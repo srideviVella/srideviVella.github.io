@@ -1,5 +1,4 @@
-Here you can say lots of fun things about your site.
+# Blog
+Things I learned and enjoyed personally.
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+<a href="https://sridevivella.github.io/"> This </a> is the place where I ramble on different tech stuff I learn in my free time.
