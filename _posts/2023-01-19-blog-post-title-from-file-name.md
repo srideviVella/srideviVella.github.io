@@ -1,6 +1,9 @@
-## SSH Tunneling in Funnel HackTheBox
+## SSH Tunneling in Funnel Machine HackTheBox
 
-Now this is all good, but how to access the psql application in <a href="https://app.hackthebox.com/starting-point"> Funnel machine </a> in HackTheBox. Let's assume the vm as the funnel machine from now on.
+
+SSH tunneling essentially allows a user to access a process on another machine even though he/she doesn't have direct access to it. For instance, if an IT administrator wants to access a paricular application in the internal network from outside of the office(though the ideal case is to use a VPN), then SSH port forwarding can be used. There are 3 types: Local, Remote, and Dynamic port forwardings. 
+
+But understanding this concept can be done in a better way by hands-on. For that, <a href="https://app.hackthebox.com/starting-point"> Funnel machine </a> in HackTheBox can be used. Let's assume the term "VM" as the funnel machine from now on.
 
 ### PSQL application in the Funnel
 In the machine, there is psql application running on the default port, 5432. Till getting the user access the machine is fairly straightforward, things get bizarre from then(atleast to me). To interact with the application, the user needs sudo permissions to install psql command which is not possible at this point. The application port is not open to the internet either as nmap showed only 2 ports open(ftp and ssh). So, instead port forwarding can be used. But the question is to which type of port forwarding to choose, local or remote. 
@@ -29,7 +32,6 @@ Even Dynamic port forwarding can be used instead of the local port forwarding as
 
 
 ![proxychains config file](https://user-images.githubusercontent.com/102641432/213583939-1711eaf5-31f0-4251-ab09-a13e42e393c8.PNG)
-
 
 ```
 ssh -D 8081 christine@IP_Of_VM
